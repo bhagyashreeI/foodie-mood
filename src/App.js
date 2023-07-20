@@ -1,5 +1,4 @@
 import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
@@ -10,13 +9,14 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="App-link "
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
         </a>
+        <div className="bg-pink-500 text-white p-4 undeline">Hello, Tailwind CSS!</div>
       </header>
     </div>
   );
