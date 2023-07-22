@@ -6,20 +6,20 @@ export const Header = (props) => {
     const [loginBtn,setLoginBtn] = useState('Login');
     const onlineStatus = useOnlineStatus();
     return (
-        <div className='header'>
+        <div className='flex justify-between bg-amber-100'>
             <div className='logo'>
-                <div className="logoitem">
-                <img src={props.logo} height="100" />
-                    <span className="caption"><i>Order-Eat-Repeat</i></span>
+                <div  >
+                <img src={props.logo} className='w-20 shadow' />
+                    <span className="caption w-70"><i>Order-Eat-Repeat</i></span>
                 </div>
             </div>
-            <div className='nav-items'>
-                <ul>
-                    <li>Online Status: {onlineStatus ? "🍏"  : "⬛" }</li>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
-                    <li><Link to="/contact-us">Contact Us</Link></li>
-                    <li><Link to="/my-cart">My Cart</Link></li>
+            <div className=''>
+                <ul className='flex p-2'>
+                    <li className='p-2'>Online Status: {onlineStatus ? "🍏"  : "⬛" }</li>
+                    <li className='p-2'><Link to="/">Home</Link></li>
+                    <li className='p-2'><Link to="/about">About Us</Link></li>
+                    <li className='p-2'><Link to="/contact-us">Contact Us</Link></li>
+                    <li className='p-2'><Link to="/my-cart">My Cart</Link></li>
                     <button onClick={
                         loginBtn=='Login' ? () => setLoginBtn("Logout") : () => setLoginBtn("Login")
                     }>{loginBtn}</button>
